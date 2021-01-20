@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/gateway/boot-camp-gateway.iml" filepath="$PROJECT_DIR$/gateway/boot-camp-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cancel/cancel.iml" filepath="$PROJECT_DIR$/cancel/cancel.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/clothrental.iml" filepath="$PROJECT_DIR$/.idea/clothrental.iml" />
       <module fileurl="file://$PROJECT_DIR$/customercenter/customercenter.iml" filepath="$PROJECT_DIR$/customercenter/customercenter.iml" />
       <module fileurl="file://$PROJECT_DIR$/delivery/delivery.iml" filepath="$PROJECT_DIR$/delivery/delivery.iml" />
