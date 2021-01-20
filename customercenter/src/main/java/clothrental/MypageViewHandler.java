@@ -35,6 +35,24 @@ public class MypageViewHandler {
         }
     }
 
+    @StreamListener(KafkaProcessor.INPUT)
+    public void whenReturned_then_CREATE_1 (@Payload Returned returned) {
+        try {
+            if (returned.isMe()) {
+                // view 객체 생성
+                Mypage mypage = new Mypage();
+                // view 객체에 이벤트의 Value 를 set 함
+                mypage.setOrderId(returned.getId());
+                mypage.setProductId(returned.getProductId());
+                mypage.setQty(returned.getQty());
+                // view 레파지 토리에 save
+                mypageRepository.save(mypage);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
 
     @StreamListener(KafkaProcessor.INPUT)
     public void whenShipped_then_UPDATE_1(@Payload Shipped shipped) {
